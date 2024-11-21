@@ -1,0 +1,94 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+
+    --f-b: 18px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Outfit;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.card{
+    width: 350px;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.card__img{
+    width: 100%;
+    border-radius: 1rem;
+}
+.card__header{
+    color: var(--white);
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card__description{
+    font-size: var(--f-b);
+    padding-bottom: 1rem;
+    color: var(--white);
+    opacity: 70%;
+    font-weight: 200;
+}
+
+.card__meta{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+
+}
+
+.card__meta-price{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cyan);
+}
+.card__meta-time{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    opacity: 50%;
+}
+
+.card__profile{
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card__profile img{
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+.card__profile-name{
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+.card__profile-name strong{
+    color: var(--white);
+    font-weight: 300;
+}
