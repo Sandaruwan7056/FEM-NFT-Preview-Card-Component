@@ -11,14 +11,14 @@
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Outfit;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,24 +26,26 @@ body{
     background-color: var(--main-bg);
 }
 
-.card{
+.card {
     width: 350px;
     background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 1rem;
 }
-.card__img{
+
+.card__img {
     width: 100%;
     border-radius: 1rem;
 }
-.card__header{
+
+.card__header {
     color: var(--white);
     padding: 1rem 0rem;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-.card__description{
+.card__description {
     font-size: var(--f-b);
     padding-bottom: 1rem;
     color: var(--white);
@@ -51,7 +53,7 @@ body{
     font-weight: 200;
 }
 
-.card__meta{
+.card__meta {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
@@ -59,13 +61,14 @@ body{
 
 }
 
-.card__meta-price{
+.card__meta-price {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     color: var(--cyan);
 }
-.card__meta-time{
+
+.card__meta-time {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -73,22 +76,55 @@ body{
     opacity: 50%;
 }
 
-.card__profile{
+.card__profile {
     padding: 1rem 0;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.card__profile img{
+
+.card__profile img {
     width: 30px;
     border: 1px solid var(--white);
     border-radius: 50%;
 }
-.card__profile-name{
+
+.card__profile-name {
     color: var(--soft-blue);
     font-weight: 300;
 }
-.card__profile-name strong{
+
+.card__profile-name strong {
     color: var(--white);
     font-weight: 300;
+}
+
+.card__img-container {
+    position: relative;
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: background-color 0, 3 ease, opacity 0.3 ease;
+}
+
+.overlay::after {
+    content: url(./images/icon-view.svg);
+    transition: opacity 0.3 ease;
+}
+
+.card__img-container:hover .overlay{
+    background-color: rgba(0, 255, 255, 0.521);
+    opacity: 1;
 }
